@@ -13,17 +13,17 @@ from email.mime.text import MIMEText
 
 
 def send_mail(recipients):
-    SENDER = 'cp4d@illumina.com'
+    SENDER = 'sender@company.com'
     SENDERNAME = 'IBM Cloud Pak for Data'
     RECIPIENT = recipients
-    HOST = "smtp.illumina.com"
+    HOST = "smtp.company.com"
     PORT = 25
-    SUBJECT = 'Login to http://dspdev.illumina.com Failed!'
+    SUBJECT = 'Login to https://server.company.com Failed!'
     BODY_HTML = """<html>
             <head></head>
             <body>                  
               <h1>Login to DSP DEV Failed:</h1>
-              <h2>Please Check CP4D URL <a href='https://dspdev.illumina.com'>https://dspdev.illumina.com</a></h2>                  
+              <h2>Please Check CP4D URL <a href='https://server.company.com'>https://server.company.com</a></h2>                  
             </body>
             </html>"""
     msg = MIMEMultipart('alternative')
@@ -50,7 +50,7 @@ def send_mail(recipients):
 class FindByXPathCSS():
 
     def test(self):
-        baseUrl = "https://dspdev.illumina.com"
+        baseUrl = "https://server.company.com"
         driver = webdriver.Chrome("D:\\rraghavan\\workspace_python\\drivers\\chromedriver.exe")
         driver.get(baseUrl)
         driver.implicitly_wait(10)
@@ -75,9 +75,9 @@ class FindByXPathCSS():
 #################
 # Main
 #################
-recipients = "rraghavan@illumina.com"
+recipients = "recipient@company.com"
 url_check = FindByXPathCSS()
-url = "https://dspdev.illumina.com"
+url = "https://server.company.com"
 try:
     initial_time = time.time()
     url_check.test()
