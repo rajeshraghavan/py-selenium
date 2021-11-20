@@ -1,3 +1,9 @@
+######################################################
+#This checkes the roundtrip time for a http request
+#Author - rajeshr
+#Date: 12/06/2020
+#####################################################
+
 import time
 import requests
 import sys
@@ -8,4 +14,4 @@ def roundtriptime(url):
     elapsed_time = str(ending_time - initial_time)
     print('The Round Trip Time for {} is {}'.format(url, elapsed_time))
 
-roundtriptime("https://dspdev.illumina.com")
+roundtriptime("https://server.company.com")
